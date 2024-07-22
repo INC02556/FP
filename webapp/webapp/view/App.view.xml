@@ -1,0 +1,48 @@
+<mvc:View
+    controllerName="fpchopchop.webapp.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+>
+    <tnt:ToolPage>
+        <!-- <tnt:header>
+            <tnt:ToolHeader>
+                <Text text="Chop Chop" />
+            </tnt:ToolHeader>
+        </tnt:header> -->
+        <tnt:sideContent >
+            <tnt:SideNavigation
+                class="sigSideNavigation"
+                itemSelect=".onItemSelect"
+                id="sideNavigation" selectedKey="walked" 
+            >
+                <tnt:NavigationList>
+                    <tnt:NavigationListItem
+                        text="Reporting"
+                        icon="sap-icon://business-objects-experience"
+                        key=""
+                        
+                        class="sigSideNavigation"
+                    />
+                    <tnt:NavigationListItem
+                        text="Resource Scheduling"
+                        icon="sap-icon://appointment-2"
+                        key="resource-scheduling"
+                        class="sigSideNavigation"
+                    />
+                    
+                </tnt:NavigationList>
+                <tnt:fixedItem>
+				<tnt:NavigationList >
+					<tnt:NavigationListItem key="toggle" text="Bar Chart" icon="sap-icon://bar-chart" />
+				</tnt:NavigationList>
+			</tnt:fixedItem>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <NavContainer id="side_Nav_Content" />
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

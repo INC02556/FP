@@ -1,0 +1,148 @@
+
+{
+    "data": [
+       {
+        "Plant": 63,
+        "Delivery": 456745,
+        "Item": "0010" ,
+        "SKUMaterial": 5392,
+        "SLOC": "171A",
+        "Picker Name": "John",
+        "Picker Qty": "20.000KG",
+        "Picking Status": "Completed",
+        "Date": "01-05-2024",
+        "Time": "09:00",
+        "Delivery pri": "High"
+       },
+       {
+        "Plant": 63,
+        "Delivery": 456745,
+        "Item": "0010" ,
+        "SKUMaterial": 5392,
+        "SLOC": "171A",
+        "Picker Name": "John",
+        "Picker Qty": "20.000KG",
+        "Picking Status": "Completed",
+        "Date": "01-05-2024",
+        "Time": "09:00",
+        "Delivery pri": "Medium"
+       },
+       {
+        "Plant": 63,
+        "Delivery": 456745,
+        "Item": "0010" ,
+        "SKUMaterial": 5392,
+        "SLOC": "171A",
+        "Picker Name": "John",
+        "Picker Qty": "20.000KG",
+        "Picking Status": "Completed",
+        "Date": "01-05-2024",
+        "Time": "09:00",
+        "Delivery pri": "High"
+       },
+       {
+        "Plant": 63,
+        "Delivery": 456745,
+        "Item": "0010" ,
+        "SKUMaterial": 5392,
+        "SLOC": "171A",
+        "Picker Name": "John",
+        "Picker Qty": "20.000KG",
+        "Picking Status": "Completed",
+        "Date": "01-05-2024",
+        "Time": "09:00",
+        "Delivery pri": "Medium"
+       },
+       {
+        "Plant": 63,
+        "Delivery": 456745,
+        "Item": "0010" ,
+        "SKUMaterial": 5392,
+        "SLOC": "171A",
+        "Picker Name": "John",
+        "Picker Qty": "20.000KG",
+        "Picking Status": "Completed",
+        "Date": "01-05-2024",
+        "Time": "09:00",
+        "Delivery pri": "Low"
+       },
+       {
+        "Plant": 63,
+        "Delivery": 456745,
+        "Item": "0010" ,
+        "SKUMaterial": 5392,
+        "SLOC": "171A",
+        "Picker Name": "John",
+        "Picker Qty": "20.000KG",
+        "Picking Status": "Completed",
+        "Date": "01-05-2024",
+        "Time": "09:00",
+        "Delivery pri": "Medium"
+       },
+       {
+        "Plant": 63,
+        "Delivery": 456745,
+        "Item": "0010" ,
+        "SKUMaterial": 5392,
+        "SLOC": "171A",
+        "Picker Name": "John",
+        "Picker Qty": "20.000KG",
+        "Picking Status": "Completed",
+        "Date": "01-05-2024",
+        "Time": "09:00",
+        "Delivery pri": "Low"
+       },
+       {
+        "Plant": 63,
+        "Delivery": 456745,
+        "Item": "0010" ,
+        "SKUMaterial": 5392,
+        "SLOC": "171A",
+        "Picker Name": "John",
+        "Picker Qty": "20.000KG",
+        "Picking Status": "Completed",
+        "Date": "01-05-2024",
+        "Time": "09:00",
+        "Delivery pri": "Medium"
+       },
+       {
+        "Plant": 63,
+        "Delivery": 456745,
+        "Item": "0010" ,
+        "SKUMaterial": 5392,
+        "SLOC": "171A",
+        "Picker Name": "John",
+        "Picker Qty": "20.000KG",
+        "Picking Status": "Completed",
+        "Date": "01-05-2024",
+        "Time": "09:00",
+        "Delivery pri": "Medium"
+       },
+       {
+        "Plant": 63,
+        "Delivery": 456745,
+        "Item": "0010" ,
+        "SKUMaterial": 5392,
+        "SLOC": "171A",
+        "Picker Name": "John",
+        "Picker Qty": "20.000KG",
+        "Picking Status": "Completed",
+        "Date": "01-05-2024",
+        "Time": "09:00",
+        "Delivery pri": "High"
+       },
+       {
+        "Plant": 63,
+        "Delivery": 456745,
+        "Item": "0010" ,
+        "SKUMaterial": 5392,
+        "SLOC": "171A",
+        "Picker Name": "John",
+        "Picker Qty": "20.000KG",
+        "Picking Status": "Completed",
+        "Date": "01-05-2024",
+        "Time": "09:00",
+        "Delivery pri": "Low"
+       }
+    ]
+}

@@ -1,0 +1,41 @@
+/* Enter your custom styles here */
+.sapMITBContent{
+    height: 100%;
+    padding: 0px !important;
+}
+
+
+.kpi-card:nth-child(1){
+    background-color: #e6ecfe;
+}
+.kpi-card:nth-child(2){
+    background-color: #fcf0ea;
+}
+.kpi-card:nth-child(3){
+    background-color: #fde8e8;
+}
+.kpi-card:nth-child(4){
+    background-color: #d9e2ec;
+}
+.kpi-card{
+    border-radius: 1rem;
+    width: 25%;
+}
+
+.kpi-card .kpi-number span{
+    color: #082941;
+}
+
+.kpi-card .kpi-description{
+    color: #082941;
+}
+
+.text-Success {
+    color: #1fb504;
+}
+.text-Warning {
+    color: #f4a971;
+}
+.text-Error {
+    color: #ce4e4d;
+}

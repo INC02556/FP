@@ -1,0 +1,197 @@
+<mvc:View
+    controllerName="fpchopchop.webapp.controller.main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:layout="sap.ui.layout"
+  
+    xmlns:common="sap.suite.ui.commons"
+>
+    <Page title="Analytics">
+        <content>
+            <IconTabBar
+                id="idIconTabBarFiori2"
+                expanded="{device>/isNoPhone}"
+                class="sapUiResponsiveContentPadding"
+                backgroundDesign="Translucent"
+                stretchContentHeight="true"
+            >
+                <items>
+                    <IconTabFilter
+                        text="Reports"
+                        key="reports"
+                    >
+                        <VBox height="100%"> 
+                            <HBox justifyContent="SpaceBetween">
+                                <FlexBox
+                                    direction="Column"
+                                    alignItems="Center"
+                                    justifyContent="Center"
+                                    fitContainer="true"
+                                    backgroundDesign="Solid"
+                                    class="sapUiTinyMargin kpi-card"
+                                >
+                                    <NumericContent
+                                        value="115"
+                                        state="Loaded"
+                                        class=" kpi-number"
+                                    />
+                                    <Text
+                                        text="All Deliveries"
+                                        class="sapUiSmallMarginBottom kpi-description"
+                                    />
+                                </FlexBox>
+                                <FlexBox
+                                    direction="Column"
+                                    alignItems="Center"
+                                    justifyContent="Center"
+                                    fitContainer="true"
+                                    backgroundDesign="Solid"
+                                    class="sapUiTinyMargin kpi-card"
+                                >
+                                    <NumericContent
+                                        value="20"
+                                        state="Loaded"
+                                        class=" kpi-number"
+                                    />
+                                    <Text
+                                        text="Open Deliveries"
+                                        class="sapUiSmallMarginBottom kpi-description"
+                                    />
+                                </FlexBox>
+                                <FlexBox
+                                    direction="Column"
+                                    alignItems="Center"
+                                    justifyContent="Center"
+                                    fitContainer="true"
+                                    backgroundDesign="Solid"
+                                    class="sapUiTinyMargin kpi-card"
+                                >
+                                    <NumericContent
+                                        value="16"
+                                        state="Loaded"
+                                        class=" kpi-number"
+                                    />
+                                    <Text
+                                        text="Partial Deliveries"
+                                        class="sapUiSmallMarginBottom kpi-description"
+                                    />
+                                </FlexBox>
+                                <FlexBox
+                                    direction="Column"
+                                    alignItems="Center"
+                                    justifyContent="Center"
+                                    fitContainer="true"
+                                    backgroundDesign="Solid"
+                                    class="sapUiTinyMargin kpi-card"
+                                >
+                                    <NumericContent
+                                        value="09"
+                                        state="Loaded"
+                                        class=" kpi-number"
+                                    />
+                                    <Text
+                                        text="Completed Deliveries"
+                                        class="sapUiSmallMarginBottom kpi-description"
+                                    />
+                                </FlexBox>
+                            </HBox>
+                     
+                        <HBox class="sapUiSmallMargin"   justifyContent="End">
+                            <SearchField width="100%" class=" sapUiLargeMarginEnd" />
+                            <Button class="sapUiTinyMarginEnd sapUiTinyMarginBegin"  icon="sap-icon://refresh" text="Refresh"/>
+                            <Button  icon="sap-icon://download" text="Export"/>
+                         </HBox>
+                         <ScrollContainer
+                            width="100%"
+                            height="100%"
+                            horizontal="true"
+                            vertical="true"
+                        >
+                        <Table
+                                width="100%"
+                                id="dataTable"
+                                inset="false"
+                                items="{data>/data}"
+                            >
+                                <columns>
+                                    <Column width="80px">
+                                        <Text text="Plant" />
+                                    </Column>
+                                    <Column width="80px">
+                                        <Text text="Delivery" />
+                                    </Column>
+                                    <Column width="80px">
+                                        <Text text="Item" />
+                                    </Column>
+                                    <Column width="100px">
+                                        <Text text="SKU/Material" />
+                                    </Column>
+                                    <Column width="80px">
+                                        <Text text="SLOC" />
+                                    </Column>
+                                    <Column width="100px">
+                                        <Text text="Picker Name" />
+                                    </Column>
+                                    <Column width="100px">
+                                        <Text text="Picker Qty" />
+                                    </Column>
+                                    <Column width="120px">
+                                        <Text text="Picking Status" />
+                                    </Column>
+                                    <Column width="100px">
+                                        <Text text="Date" />
+                                    </Column>
+                                    <Column width="80px">
+                                        <Text text="Time" />
+                                    </Column>
+                                    <Column width="100px">
+                                        <Text text="Delivery pri" />
+                                    </Column>
+                                </columns>
+
+                                <items>
+                                    <ColumnListItem>
+                                        <cells>
+                                            <Text text="{data>Plant}" />
+                                            <Text text="{data>Delivery}" />
+                                            <Text text="{data>Item}" />
+                                            <Text text="{data>SKUMaterial}" />
+                                            <Text text="{data>SLOC}" />
+                                            <Text text="{data>Picker Name}" />
+                                            <Text text="{data>Picker Qty}" />
+                                            <Text
+                                                text="{data>Picking Status}"
+                                            />
+                                            <Text text="{data>Date}" />
+                                            <Text text="{data>Time}" />
+                                            <ObjectStatus class="font-bold" text="{data>Delivery pri}" 
+                                      state="{path: 'data>Delivery pri', formatter: '.formatter.deliveryStatus'}">
+                                     </ObjectStatus>
+                                             
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </ScrollContainer>
+                        </VBox>
+                    </IconTabFilter>
+                    <IconTabFilter
+                        text="Graphs"
+                        key="graphs">
+                        <HBox width="100%" >
+                     
+                        <VBox width="50%">
+                          <viz:VizFrame id="chartContainer" vizType="line" />
+                        </VBox>
+                        <!-- <VBox width="50%">
+                          <viz:VizFrame id="chartContainer2" vizType="line" width="100%" height="100%"/>
+                        </VBox> -->
+                        </HBox>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+    </Page>
+</mvc:View>

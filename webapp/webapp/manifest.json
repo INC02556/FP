@@ -1,0 +1,131 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "fpchopchop.webapp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.14.1",
+      "toolsId": "6f5d5e57-4087-435f-8191-d0569c3a1837"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.126.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "data": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "./model/data.json"
+      },
+      "Products": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/Product.json"
+      },
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "fpchopchop.webapp.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "fpchopchop.webapp.view",
+        "controlAggregation": "pages",
+        "controlId": "side_Nav_Content",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "",
+          "pattern": "",
+          "target": [
+            "Targetmain"
+          ]
+        },
+        {
+          "name": "resource-scheduling",
+          "pattern": "resource-scheduling",
+          "target": [
+            "resource-scheduling"
+          ]
+        }
+      ],
+      "targets": {
+        "Targetmain": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "main",
+          "viewName": "main"
+        },
+        "resource-scheduling": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "resource-scheduling",
+          "viewName": "resource-scheduling"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "fpchopchop.webapp.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "chopchop"
+  }
+}
