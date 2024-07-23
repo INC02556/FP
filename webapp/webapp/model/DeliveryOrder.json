@@ -1,0 +1,124 @@
+{
+    "data": [
+        {
+            "Item No.": 1,
+            "Plant": "63",
+            "Delivery": "456745",
+            "Article Code": "5392",
+            "Picker Name": "John",
+            "Picked Qty": "20.000KG",
+            "Picking Status": "UnScheduled",
+            "Start Time": "-",
+            "End Time": "-",
+            "Ship to Party": "10019- SG wa"
+        },
+        {
+            "Item No.": 2,
+            "Plant": "63",
+            "Delivery": "456745",
+            "Article Code": "5392",
+            "Picker Name": "John",
+            "Picked Qty": "20.100KG",
+            "Picking Status": "Completed",
+            "Start Time": "01-05-2024 at 09:00 am",
+            "End Time": "01-05-2024 at 10:10 am",
+            "Ship to Party": "10019- SG wa"
+        },
+        {
+            "Item No.": 3,
+            "Plant": "63",
+            "Delivery": "456745",
+            "Article Code": "5392",
+            "Picker Name": "John",
+            "Picked Qty": "20.000KG",
+            "Picking Status": "Completed",
+            "Start Time": "01-05-2024 at 09:00 am",
+            "End Time": "01-05-2024 at 10:10 am",
+            "Ship to Party": "10019- SG wa"
+        },
+        {
+            "Item No.": 4,
+            "Plant": "63",
+            "Delivery": "456745",
+            "Article Code": "5392",
+            "Picker Name": "John",
+            "Picked Qty": "20.150KG",
+            "Picking Status": "Completed",
+            "Start Time": "01-05-2024 at 09:00 am",
+            "End Time": "01-05-2024 at 10:10 am",
+            "Ship to Party": "10019- SG wa"
+        },
+        {
+            "Item No.": 5,
+            "Plant": "63",
+            "Delivery": "456750",
+            "Article Code": "5392",
+            "Picker Name": "Sunny",
+            "Picked Qty": "20.000KG",
+            "Picking Status": "Completed",
+            "Start Time": "01-05-2024 at 09:00 am",
+            "End Time": "01-05-2024 at 10:10 am",
+            "Ship to Party": "10019- SG wa"
+        },
+        {
+            "Item No.": 6,
+            "Plant": "63",
+            "Delivery": "456750",
+            "Article Code": "5392",
+            "Picker Name": "Sunny",
+            "Picked Qty": "20.000KG",
+            "Picking Status": "Open",
+            "Start Time": "01-05-2024 at 09:00 am",
+            "End Time": "-",
+            "Ship to Party": "10019- SG wa"
+        },
+        {
+            "Item No.": 7,
+            "Plant": "63",
+            "Delivery": "456750",
+            "Article Code": "5392",
+            "Picker Name": "Sunny",
+            "Picked Qty": "19.950KG",
+            "Picking Status": "UnScheduled",
+            "Start Time": "-",
+            "End Time": "-",
+            "Ship to Party": "10019- SG wa"
+        },
+        {
+            "Item No.": 8,
+            "Plant": "63",
+            "Delivery": "456750",
+            "Article Code": "5392",
+            "Picker Name": "Sunny",
+            "Picked Qty": "20.000KG",
+            "Picking Status": "Completed",
+            "Start Time": "01-05-2024 at 09:00 am",
+            "End Time": "01-05-2024 at 10:10 am",
+            "Ship to Party": "10019- SG wa"
+        },
+        {
+            "Item No.": 9,
+            "Plant": "63",
+            "Delivery": "456779",
+            "Article Code": "5392",
+            "Picker Name": "Sunny",
+            "Picked Qty": "20.000KG",
+            "Picking Status": "Completed",
+            "Start Time": "01-05-2024 at 09:00 am",
+            "End Time": "01-05-2024 at 10:10 am",
+            "Ship to Party": "10019- SG wa"
+        },
+        {
+            "Item No.": 10,
+            "Plant": "63",
+            "Delivery": "456779",
+            "Article Code": "5392",
+            "Picker Name": "Sunny",
+            "Picked Qty": "20.000KG",
+            "Picking Status": "Open",
+            "Start Time": "01-05-2024 at 09:00 am",
+            "End Time": "-",
+            "Ship to Party": "10019- SG wa"
+        }
+    ]
+}

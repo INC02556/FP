@@ -5,21 +5,23 @@
     xmlns="sap.m"
     xmlns:viz="sap.viz.ui5.controls"
     xmlns:layout="sap.ui.layout"
-  
+    xmlns:s="sap.ui.table"
     xmlns:common="sap.suite.ui.commons"
 >
-    <Page title="Analytics">
+    <Page title="Reporting">
         <content>
             <IconTabBar
-                id="idIconTabBarFiori2"
+                id="iconTabBar1"
                 expanded="{device>/isNoPhone}"
                 class="sapUiResponsiveContentPadding"
                 backgroundDesign="Translucent"
                 stretchContentHeight="true"
+                headerMode="Inline"
             >
                 <items>
                     <IconTabFilter
-                        text="Reports"
+                        icon="sap-icon://account"
+                        text="Delivery Order Vs Picker"
                         key="reports"
                     >
                         <VBox height="100%"> 
@@ -98,96 +100,151 @@
                                 </FlexBox>
                             </HBox>
                      
-                        <HBox class="sapUiSmallMargin"   justifyContent="End">
-                            <SearchField width="100%" class=" sapUiLargeMarginEnd" />
-                            <Button class="sapUiTinyMarginEnd sapUiTinyMarginBegin"  icon="sap-icon://refresh" text="Refresh"/>
-                            <Button  icon="sap-icon://download" text="Export"/>
-                         </HBox>
+
                          <ScrollContainer
                             width="100%"
                             height="100%"
                             horizontal="true"
                             vertical="true"
                         >
-                        <Table
+                        <s:Table
                                 width="100%"
-                                id="dataTable"
-                                inset="false"
-                                items="{data>/data}"
+                                id="DeliveryOrderTable"
+                                rows="{DeliveryOrder>/data}"
+				                sort="sortDeliveryDate"
+				                ariaLabelledBy="title"
+                                selectionMode="None"
                             >
-                                <columns>
-                                    <Column width="80px">
-                                        <Text text="Plant" />
-                                    </Column>
-                                    <Column width="80px">
-                                        <Text text="Delivery" />
-                                    </Column>
-                                    <Column width="80px">
-                                        <Text text="Item" />
-                                    </Column>
-                                    <Column width="100px">
-                                        <Text text="SKU/Material" />
-                                    </Column>
-                                    <Column width="80px">
-                                        <Text text="SLOC" />
-                                    </Column>
-                                    <Column width="100px">
-                                        <Text text="Picker Name" />
-                                    </Column>
-                                    <Column width="100px">
-                                        <Text text="Picker Qty" />
-                                    </Column>
-                                    <Column width="120px">
-                                        <Text text="Picking Status" />
-                                    </Column>
-                                    <Column width="100px">
-                                        <Text text="Date" />
-                                    </Column>
-                                    <Column width="80px">
-                                        <Text text="Time" />
-                                    </Column>
-                                    <Column width="100px">
-                                        <Text text="Delivery pri" />
-                                    </Column>
-                                </columns>
-
-                                <items>
-                                    <ColumnListItem>
-                                        <cells>
-                                            <Text text="{data>Plant}" />
-                                            <Text text="{data>Delivery}" />
-                                            <Text text="{data>Item}" />
-                                            <Text text="{data>SKUMaterial}" />
-                                            <Text text="{data>SLOC}" />
-                                            <Text text="{data>Picker Name}" />
-                                            <Text text="{data>Picker Qty}" />
-                                            <Text
-                                                text="{data>Picking Status}"
-                                            />
-                                            <Text text="{data>Date}" />
-                                            <Text text="{data>Time}" />
-                                            <ObjectStatus class="font-bold" text="{data>Delivery pri}" 
-                                      state="{path: 'data>Delivery pri', formatter: '.formatter.deliveryStatus'}">
-                                     </ObjectStatus>
-                                             
-                                        </cells>
-                                    </ColumnListItem>
-                                </items>
-                            </Table>
+                            <s:extension>
+					<OverflowToolbar style="Clear">
+						<ToolbarSpacer/>
+                        <SearchField
+							placeholder="search ..."
+							value="{ui>/globalFilter}"
+							search="filterGlobally"
+							width="15rem"/>
+						<Button iconFirst="false" class=""  icon="sap-icon://refresh" text="Refresh"/>
+                        <Button iconFirst="false"  icon="sap-icon://download" text="Export"/>
+					</OverflowToolbar>
+				</s:extension>
+                             <s:columns>
+                                    <s:Column
+                                    sortProperty="Item No." 
+                                    width="80px">
+                                    <Label text="Item No." />
+                                        <s:template>
+							              <Text text="{DeliveryOrder>Item No.}" wrapping="false" />
+						                 </s:template>
+                                    </s:Column>
+                                  
+                                    <s:Column
+                                    sortProperty="Plant" 
+                                    width="80px">
+                                    <Label text="Plant" />
+                                        <s:template>
+							              <Text text="{DeliveryOrder>Plant}" wrapping="false" />
+						                 </s:template>
+                                    </s:Column>
+                                   
+                                    <s:Column
+                                    sortProperty="Delivery" 
+                                    width="80px">
+                                    <Label text="Delivery" />
+                                        <s:template>
+							              <Text text="{DeliveryOrder>Delivery}" wrapping="false" />
+						                 </s:template>
+                                    </s:Column>
+                                   
+                                     <s:Column
+                                    sortProperty="Article Code" 
+                                    width="100px">
+                                    <Label text="Article Code" />
+                                        <s:template>
+							              <Text text="{DeliveryOrder>Article Code}" wrapping="false" />
+						                 </s:template>
+                                    </s:Column>
+                                 
+                                     <s:Column
+                                    sortProperty="Picker Name" 
+                                    width="100px">
+                                    <Label text="Picker Name" />
+                                        <s:template>
+							              <Text text="{DeliveryOrder>Picker Name}" wrapping="false" />
+						                 </s:template>
+                                    </s:Column>
+                                  
+                                     <s:Column
+                                    sortProperty="Picked Qty" 
+                                    width="100px">
+                                    <Label text="Picked Qty" />
+                                        <s:template>
+							              <Text text="{DeliveryOrder>Picked Qty}" wrapping="false" />
+						                 </s:template>
+                                    </s:Column>
+                                
+                                     <s:Column
+                                    sortProperty="Picking Status" 
+                                    width="120px">
+                                    <Label text="Picking Status" />
+                                        <s:template>
+							              <Text text="{DeliveryOrder>Picking Status}" wrapping="false" />
+						                 </s:template>
+                                    </s:Column>
+                              
+                                     <s:Column
+                                    sortProperty="Start Time" 
+                                    width="180px">
+                                    <Label text="Start Time" />
+                                        <s:template>
+							              <Text text="{DeliveryOrder>Start Time}" wrapping="false" />
+						                 </s:template>
+                                    </s:Column>
+                                   
+                                     <s:Column
+                                    sortProperty="End Time" 
+                                    width="180px">
+                                    <Label text="End Time" />
+                                        <s:template>
+							              <Text text="{DeliveryOrder>End Time}" wrapping="false" />
+						                 </s:template>
+                                    </s:Column>
+                               
+                                     <s:Column
+                                    sortProperty="Ship to Party" 
+                                    width="120px">
+                                    <Label text="Ship to Party" />
+                                        <s:template>
+							              <Text text="{DeliveryOrder>Ship to Party}" wrapping="false" />
+						                 </s:template>
+                                    </s:Column>
+                                   </s:columns>
+                            </s:Table>
                         </ScrollContainer>
                         </VBox>
                     </IconTabFilter>
+                    <IconTabSeparator icon=""/>
                     <IconTabFilter
-                        text="Graphs"
+                    icon="sap-icon://activity-2"
+                        text="Detailed Order Vs Picked"
                         key="graphs">
                         <HBox width="100%" >
                      
                         <VBox width="50%">
                           <viz:VizFrame id="chartContainer" vizType="line" />
                         </VBox>
-                        <!-- <VBox width="50%">
-                          <viz:VizFrame id="chartContainer2" vizType="line" width="100%" height="100%"/>
-                        </VBox> -->
+                       
+                        </HBox>
+                    </IconTabFilter>
+                    <IconTabSeparator icon=""/>
+                    <IconTabFilter
+                    icon="sap-icon://legend"
+                        text="Sumary Order Vs Picked"
+                        key="graphs">
+                        <HBox width="100%" >
+                        <VBox width="50%">
+                          <viz:VizFrame id="chartContainer1" vizType="line" />
+                        </VBox>
+                       
                         </HBox>
                     </IconTabFilter>
                 </items>

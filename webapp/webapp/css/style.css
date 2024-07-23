@@ -3,8 +3,33 @@
     height: 100%;
     padding: 0px !important;
 }
-
-
+/* .sapTntToolPage{
+    padding: 0px !important;
+}
+.sapTntNL li div a{
+    display: flex;
+    flex-direction: column;
+} 
+.sapTntNLI{
+    height: 100% !important;
+}
+.sapTntNL .sapTntNLIIcon{
+    font-size: 2rem !important;
+} 
+.sapTntNL .sapTntNLISelectionIndicator {
+    display: none !important;
+}
+.sapTntSideNavigation {
+    background-color: #082940 !important;
+    border-radius: 0px !important;
+}
+.sapTntToolPageAside{
+    margin: 0px !important;
+}
+.sapTntToolPageMain{
+    margin: 0px !important;
+    border-radius: 0px !important;
+} */
 .kpi-card:nth-child(1){
     background-color: #e6ecfe;
 }

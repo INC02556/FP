@@ -52,13 +52,17 @@
       "cozy": true
     },
     "models": {
-      "data": {
+      "DeliveryOrder": {
         "type": "sap.ui.model.json.JSONModel",
-        "uri": "./model/data.json"
+        "uri": "model/DeliveryOrder.json"
+      },
+      "DetailedOrder": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "./model/DetailedOrder.json"
       },
       "Products": {
         "type": "sap.ui.model.json.JSONModel",
-        "uri": "model/Product.json"
+        "uri": "./model/Product.json"
       },
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
@@ -98,6 +102,13 @@
           "target": [
             "resource-scheduling"
           ]
+        },
+        {
+          "name": "picklist-sequencing",
+          "pattern": "picklist-sequencing",
+          "target": [
+            "picklist-sequencing"
+          ]
         }
       ],
       "targets": {
@@ -114,6 +125,13 @@
           "clearControlAggregation": false,
           "viewId": "resource-scheduling",
           "viewName": "resource-scheduling"
+        },
+        "picklist-sequencing": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "picklist-sequencing",
+          "viewName": "picklist-sequencing"
         }
       }
     },

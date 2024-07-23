@@ -1,0 +1,124 @@
+{
+    "data": [
+        {
+            "Item No.": 1,
+            "Article No.": "10395456",
+            "Article Description": "PASAR TOMAN FILLET S/LESS KG",
+            "Ordering UOM": "KG",
+            "DO No.": "8108780383",
+            "Store No.": 343,
+            "Store Name": "ARTRA",
+            "Total STO Qty": 1,
+            "Total Picked Qty": 1.022,
+            "Total No. of Pallets": 4
+        },
+        {
+            "Item No.": 2,
+            "Article No.": "10395438",
+            "Article Description": "PASAR F?T COD FILLET KG",
+            "Ordering UOM": "KG",
+            "DO No.": "8108780308",
+            "Store No.": 391,
+            "Store Name": "RVAL",
+            "Total STO Qty": 1,
+            "Total Picked Qty": 1.324,
+            "Total No. of Pallets": 6
+        },
+        {
+            "Item No.": 3,
+            "Article No.": "10395457",
+            "Article Description": "PASAR NOR SALM FIL TRMA@KG",
+            "Ordering UOM": "KG",
+            "DO No.": "8108780318",
+            "Store No.": 438,
+            "Store Name": "JCC",
+            "Total STO Qty": 1,
+            "Total Picked Qty": 1.258,
+            "Total No. of Pallets": 5
+        },
+        {
+            "Item No.": 4,
+            "Article No.": "10395490",
+            "Article Description": "PASAR F/T COD FISH BONE KG",
+            "Ordering UOM": "KG",
+            "DO No.": "8108780322",
+            "Store No.": 433,
+            "Store Name": "CP2",
+            "Total STO Qty": 1,
+            "Total Picked Qty": 1.301,
+            "Total No. of Pallets": 5
+        },
+        {
+            "Item No.": 5,
+            "Article No.": "10395489",
+            "Article Description": "PASAR NOR SALMON HEAD KG",
+            "Ordering UOM": "KG",
+            "DO No.": "8108780383",
+            "Store No.": 466,
+            "Store Name": "VLPT",
+            "Total STO Qty": 1,
+            "Total Picked Qty": 1.176,
+            "Total No. of Pallets": 5
+        },
+        {
+            "Item No.": 6,
+            "Article No.": "10395456",
+            "Article Description": "PASAR NOR SALMON BONE OFF KG",
+            "Ordering UOM": "KG",
+            "DO No.": "8108780327",
+            "Store No.": 424,
+            "Store Name": "DTES",
+            "Total STO Qty": 1,
+            "Total Picked Qty": 1.429,
+            "Total No. of Pallets": 6
+        },
+        {
+            "Item No.": 7,
+            "Article No.": "10395434",
+            "Article Description": "PASAR NOR SALMON BONE KG",
+            "Ordering UOM": "KG",
+            "DO No.": "8108780383",
+            "Store No.": 366,
+            "Store Name": "11S",
+            "Total STO Qty": 1,
+            "Total Picked Qty": 1.339,
+            "Total No. of Pallets": 5
+        },
+        {
+            "Item No.": 8,
+            "Article No.": "10395430",
+            "Article Description": "PASAR FARMER MILK FISH 1 KG",
+            "Ordering UOM": "KG",
+            "DO No.": "8108780376",
+            "Store No.": 441,
+            "Store Name": "CTPT",
+            "Total STO Qty": 1,
+            "Total Picked Qty": 1.063,
+            "Total No. of Pallets": 4
+        },
+        {
+            "Item No.": 9,
+            "Article No.": "10395499",
+            "Article Description": "PASAR F/SEAWATER SEABASS KG",
+            "Ordering UOM": "KG",
+            "DO No.": "8108780354",
+            "Store No.": 456,
+            "Store Name": "SCOT",
+            "Total STO Qty": 1,
+            "Total Picked Qty": 1.184,
+            "Total No. of Pallets": 5
+        },
+        {
+            "Item No.": 10,
+            "Article No.": "10395461",
+            "Article Description": "PASAR F/T TIGER PRAWN 31/35",
+            "Ordering UOM": "KG",
+            "DO No.": "8108780391",
+            "Store No.": 459,
+            "Store Name": "SCOT",
+            "Total STO Qty": 14,
+            "Total Picked Qty": 14.25,
+            "Total No. of Pallets": 52
+        }
+    ]
+}
