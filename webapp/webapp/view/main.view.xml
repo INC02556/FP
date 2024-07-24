@@ -3,20 +3,17 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
-    xmlns:viz="sap.viz.ui5.controls"
-    xmlns:layout="sap.ui.layout"
-    xmlns:s="sap.ui.table"
-    xmlns:common="sap.suite.ui.commons"
+    xmlns:core="sap.ui.core"
 >
     <Page title="Reporting">
         <content>
             <IconTabBar
-                id="iconTabBar1"
                 expanded="{device>/isNoPhone}"
                 class="sapUiResponsiveContentPadding"
                 backgroundDesign="Translucent"
                 stretchContentHeight="true"
                 headerMode="Inline"
+                expandable="false"
             >
                 <items>
                     <IconTabFilter
@@ -24,228 +21,25 @@
                         text="Delivery Order Vs Picker"
                         key="reports"
                     >
-                        <VBox height="100%"> 
-                            <HBox justifyContent="SpaceBetween">
-                                <FlexBox
-                                    direction="Column"
-                                    alignItems="Center"
-                                    justifyContent="Center"
-                                    fitContainer="true"
-                                    backgroundDesign="Solid"
-                                    class="sapUiTinyMargin kpi-card"
-                                >
-                                    <NumericContent
-                                        value="115"
-                                        state="Loaded"
-                                        class=" kpi-number"
-                                    />
-                                    <Text
-                                        text="All Deliveries"
-                                        class="sapUiSmallMarginBottom kpi-description"
-                                    />
-                                </FlexBox>
-                                <FlexBox
-                                    direction="Column"
-                                    alignItems="Center"
-                                    justifyContent="Center"
-                                    fitContainer="true"
-                                    backgroundDesign="Solid"
-                                    class="sapUiTinyMargin kpi-card"
-                                >
-                                    <NumericContent
-                                        value="20"
-                                        state="Loaded"
-                                        class=" kpi-number"
-                                    />
-                                    <Text
-                                        text="Open Deliveries"
-                                        class="sapUiSmallMarginBottom kpi-description"
-                                    />
-                                </FlexBox>
-                                <FlexBox
-                                    direction="Column"
-                                    alignItems="Center"
-                                    justifyContent="Center"
-                                    fitContainer="true"
-                                    backgroundDesign="Solid"
-                                    class="sapUiTinyMargin kpi-card"
-                                >
-                                    <NumericContent
-                                        value="16"
-                                        state="Loaded"
-                                        class=" kpi-number"
-                                    />
-                                    <Text
-                                        text="Partial Deliveries"
-                                        class="sapUiSmallMarginBottom kpi-description"
-                                    />
-                                </FlexBox>
-                                <FlexBox
-                                    direction="Column"
-                                    alignItems="Center"
-                                    justifyContent="Center"
-                                    fitContainer="true"
-                                    backgroundDesign="Solid"
-                                    class="sapUiTinyMargin kpi-card"
-                                >
-                                    <NumericContent
-                                        value="09"
-                                        state="Loaded"
-                                        class=" kpi-number"
-                                    />
-                                    <Text
-                                        text="Completed Deliveries"
-                                        class="sapUiSmallMarginBottom kpi-description"
-                                    />
-                                </FlexBox>
-                            </HBox>
-                     
-
-                         <ScrollContainer
-                            width="100%"
-                            height="100%"
-                            horizontal="true"
-                            vertical="true"
-                        >
-                        <s:Table
-                                width="100%"
-                                id="DeliveryOrderTable"
-                                rows="{DeliveryOrder>/data}"
-				                sort="sortDeliveryDate"
-				                ariaLabelledBy="title"
-                                selectionMode="None"
-                            >
-                            <s:extension>
-					<OverflowToolbar style="Clear">
-						<ToolbarSpacer/>
-                        <SearchField
-							placeholder="search ..."
-							value="{ui>/globalFilter}"
-							search="filterGlobally"
-							width="15rem"/>
-						<Button iconFirst="false" class=""  icon="sap-icon://refresh" text="Refresh"/>
-                        <Button iconFirst="false"  icon="sap-icon://download" text="Export"/>
-					</OverflowToolbar>
-				</s:extension>
-                             <s:columns>
-                                    <s:Column
-                                    sortProperty="Item No." 
-                                    width="80px">
-                                    <Label text="Item No." />
-                                        <s:template>
-							              <Text text="{DeliveryOrder>Item No.}" wrapping="false" />
-						                 </s:template>
-                                    </s:Column>
-                                  
-                                    <s:Column
-                                    sortProperty="Plant" 
-                                    width="80px">
-                                    <Label text="Plant" />
-                                        <s:template>
-							              <Text text="{DeliveryOrder>Plant}" wrapping="false" />
-						                 </s:template>
-                                    </s:Column>
-                                   
-                                    <s:Column
-                                    sortProperty="Delivery" 
-                                    width="80px">
-                                    <Label text="Delivery" />
-                                        <s:template>
-							              <Text text="{DeliveryOrder>Delivery}" wrapping="false" />
-						                 </s:template>
-                                    </s:Column>
-                                   
-                                     <s:Column
-                                    sortProperty="Article Code" 
-                                    width="100px">
-                                    <Label text="Article Code" />
-                                        <s:template>
-							              <Text text="{DeliveryOrder>Article Code}" wrapping="false" />
-						                 </s:template>
-                                    </s:Column>
-                                 
-                                     <s:Column
-                                    sortProperty="Picker Name" 
-                                    width="100px">
-                                    <Label text="Picker Name" />
-                                        <s:template>
-							              <Text text="{DeliveryOrder>Picker Name}" wrapping="false" />
-						                 </s:template>
-                                    </s:Column>
-                                  
-                                     <s:Column
-                                    sortProperty="Picked Qty" 
-                                    width="100px">
-                                    <Label text="Picked Qty" />
-                                        <s:template>
-							              <Text text="{DeliveryOrder>Picked Qty}" wrapping="false" />
-						                 </s:template>
-                                    </s:Column>
-                                
-                                     <s:Column
-                                    sortProperty="Picking Status" 
-                                    width="120px">
-                                    <Label text="Picking Status" />
-                                        <s:template>
-							              <Text text="{DeliveryOrder>Picking Status}" wrapping="false" />
-						                 </s:template>
-                                    </s:Column>
-                              
-                                     <s:Column
-                                    sortProperty="Start Time" 
-                                    width="180px">
-                                    <Label text="Start Time" />
-                                        <s:template>
-							              <Text text="{DeliveryOrder>Start Time}" wrapping="false" />
-						                 </s:template>
-                                    </s:Column>
-                                   
-                                     <s:Column
-                                    sortProperty="End Time" 
-                                    width="180px">
-                                    <Label text="End Time" />
-                                        <s:template>
-							              <Text text="{DeliveryOrder>End Time}" wrapping="false" />
-						                 </s:template>
-                                    </s:Column>
-                               
-                                     <s:Column
-                                    sortProperty="Ship to Party" 
-                                    width="120px">
-                                    <Label text="Ship to Party" />
-                                        <s:template>
-							              <Text text="{DeliveryOrder>Ship to Party}" wrapping="false" />
-						                 </s:template>
-                                    </s:Column>
-                                   </s:columns>
-                            </s:Table>
-                        </ScrollContainer>
-                        </VBox>
+                        <core:Fragment fragmentName="fpchopchop.webapp.fragment.DeliveryOrder" type="XML"/>
                     </IconTabFilter>
-                    <IconTabSeparator icon=""/>
+                    <IconTabSeparator icon="" />
                     <IconTabFilter
-                    icon="sap-icon://activity-2"
+                        icon="sap-icon://activity-2"
                         text="Detailed Order Vs Picked"
-                        key="graphs">
-                        <HBox width="100%" >
-                     
-                        <VBox width="50%">
-                          <viz:VizFrame id="chartContainer" vizType="line" />
-                        </VBox>
-                       
-                        </HBox>
+                        key="graphs"
+                    >
+                             <core:Fragment fragmentName="fpchopchop.webapp.fragment.DetailedOrder" type="XML"/>
+
                     </IconTabFilter>
-                    <IconTabSeparator icon=""/>
+                    <IconTabSeparator icon="" />
                     <IconTabFilter
-                    icon="sap-icon://legend"
+                        icon="sap-icon://legend"
                         text="Sumary Order Vs Picked"
-                        key="graphs">
-                        <HBox width="100%" >
-                        <VBox width="50%">
-                          <viz:VizFrame id="chartContainer1" vizType="line" />
-                        </VBox>
-                       
-                        </HBox>
+                        key="graphs"
+                    >
+                     <core:Fragment fragmentName="fpchopchop.webapp.fragment.SummaryOrder" type="XML"/>
+
                     </IconTabFilter>
                 </items>
             </IconTabBar>

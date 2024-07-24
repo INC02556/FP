@@ -13,14 +13,7 @@ sap.ui.define(
         },
         onItemSelect: function(oEvent){
           var key = oEvent.getParameter("item").getKey();
-          if(key === "toggle"){
-            const oSideNavigation = this.byId("sideNavigation"),
-            bExpanded = oSideNavigation.getExpanded();
-            oSideNavigation.setExpanded(!bExpanded);
-          }
-          else{
             this.oRouter.navTo(key);
-          }
           
         },
       });

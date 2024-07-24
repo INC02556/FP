@@ -1,20 +1,37 @@
 /* Enter your custom styles here */
-.sapMITBContent{
-    height: 100%;
-    padding: 0px !important;
-}
-/* .sapTntToolPage{
+
+
+/* Side Navigation */
+.sapTntToolPage{
     padding: 0px !important;
 }
 .sapTntNL li div a{
     display: flex;
     flex-direction: column;
 } 
+.sapTntNLI .sapTntNLIIcon{
+    color: white !important;
+    padding: 7px 4px;
+    border-radius: 11px;
+}
+.sapTntNL [tabindex]:focus::after {
+    border: none !important;
+}
+
+.sapTntNLISelected{
+    border: none !important;
+}
+.sapTntNLISelected .sapUiIcon {
+    background-color: white !important;
+    color: #082940 !important;
+}
 .sapTntNLI{
     height: 100% !important;
+    background-color: transparent !important;
 }
+
 .sapTntNL .sapTntNLIIcon{
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
 } 
 .sapTntNL .sapTntNLISelectionIndicator {
     display: none !important;
@@ -22,14 +39,27 @@
 .sapTntSideNavigation {
     background-color: #082940 !important;
     border-radius: 0px !important;
+    width: 4.25rem !important;
+    min-width: 4.25rem !important;
 }
+.sapTntNLIText{
+    color: white !important;
+    font-size: 11px !important;
+    font-weight: 100 !important;
+    white-space: normal !important;
+    text-align: center !important;
+    margin-bottom: 10px !important;
+} 
 .sapTntToolPageAside{
     margin: 0px !important;
 }
 .sapTntToolPageMain{
     margin: 0px !important;
     border-radius: 0px !important;
-} */
+}
+/*  */
+
+/* KPI Card */
 .kpi-card:nth-child(1){
     background-color: #e6ecfe;
 }
@@ -54,7 +84,9 @@
 .kpi-card .kpi-description{
     color: #082941;
 }
+/*  */
 
+/* Status Text */
 .text-Success {
     color: #1fb504;
 }
@@ -64,3 +96,63 @@
 .text-Error {
     color: #ce4e4d;
 }
+/*  */
+
+/* Tab Header */
+.sapMITBContent{
+    height: 100%;
+    padding: 0px !important;
+}
+.sapMITH{
+    box-shadow: none !important;
+}
+.sapMITBContentArrow{
+    display: none !important;
+}
+
+.sapMITBItem .sapMITHTextContent{
+    color: #717984 !important;
+
+}
+.sapMITBSelected .sapMITHTextContent{
+    color: #082940 !important;
+}
+
+.sapMITBItem .sapUiIcon{
+    color: #717984 !important;
+}
+.sapMITBSelected .sapUiIcon{
+    color: #C2752F !important;
+}
+
+.sapMITBItem:hover .sapUiIcon::before{
+    color: #C2752F !important;
+}
+.sapMITBItem .sapMITBText:focus{
+    border: none !important;
+}
+
+/* Page Header */
+.sapMBar{
+    box-shadow: none;
+}
+.sapMTitle{
+    color:  #082940 !important;
+    margin-left: 1rem !important;
+}
+
+/* primary secondary and tertiary BUTTON */
+.tertiaryButton {
+    background-color: #E8E7FA; 
+    border-radius: 5px;
+    span{
+        color:#3026B9 !important;
+    }
+}
+
+
+/* 
+.customButton:hover {
+    background-color: #0056b3; 
+    border-color: #003f7f; 
+} */

@@ -13,10 +13,11 @@
             </tnt:ToolHeader>
         </tnt:header> -->
         <tnt:sideContent >
-            <tnt:SideNavigation
+            <tnt:SideNavigation 
                 class="sigSideNavigation"
                 itemSelect=".onItemSelect"
                 id="sideNavigation" 
+                expanded="false"
             >
                 <tnt:NavigationList>
                     <tnt:NavigationListItem
@@ -24,6 +25,7 @@
                         icon="sap-icon://business-objects-experience"
                         key=""
                         class="sigSideNavigation"
+                        
                     />
                     <tnt:NavigationListItem
                         text="Resource Scheduling"
@@ -38,11 +40,11 @@
                         class="sigSideNavigation"
                     />
                 </tnt:NavigationList>
-                <tnt:fixedItem>
+                <!-- <tnt:fixedItem>
 				<tnt:NavigationList >
 					<tnt:NavigationListItem key="toggle"  icon="sap-icon://action-settings" />
 				</tnt:NavigationList>
-			</tnt:fixedItem>
+			</tnt:fixedItem> -->
             </tnt:SideNavigation>
         </tnt:sideContent>
         <tnt:mainContents>

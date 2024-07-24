@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <VBox>
+        <Label text="Name"/>
+        <Input id="nameInput" />
+        <Label text="Email"/>
+        <Input id="emailInput" type="Email"/>
+        <Button text="Submit" press="onSubmit"/>
+    </VBox>
+</core:FragmentDefinition>
