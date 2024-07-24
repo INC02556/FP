@@ -1,4 +1,4 @@
-sap.ui.define(['sap/ui/core/mvc/Controller',
+sap.ui.define(["./BaseController",
 	"fpchopchop/webapp/model/formatter",
 	'sap/ui/model/json/JSONModel',
 	"sap/ui/model/Filter",
@@ -6,10 +6,10 @@ sap.ui.define(['sap/ui/core/mvc/Controller',
 	"sap/viz/ui5/data/FlattenedDataset",
     "sap/viz/ui5/controls/common/feeds/FeedItem"
 ],
-	function (Controller, formatter,JSONModel,Filter,FilterOperator, FlattenedDataset, FeedItem) {
+	function (BaseController, formatter,JSONModel,Filter,FilterOperator, FlattenedDataset, FeedItem) {
 		"use strict";
 
-		return Controller.extend("fpchopchop.webapp.controller.main", {
+		return BaseController.extend("fpchopchop.webapp.controller.main", {
 			formatter: formatter,
 			onInit: function () {
 				var oModel = this.getOwnerComponent().getModel("DeliveryOrder");

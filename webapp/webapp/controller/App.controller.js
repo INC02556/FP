@@ -1,11 +1,11 @@
 sap.ui.define(
     [
-        "sap/ui/core/mvc/Controller",
-        "../model/formatter"
+      "sap/ui/core/mvc/Controller",
+        "../model/formatter",
     ],
-    function(BaseController,formatter) {
+    function(Controller,formatter,History) {
       "use strict";
-      return BaseController.extend("fpchopchop.webapp.controller.App", {
+      return Controller.extend("fpchopchop.webapp.controller.App", {
         formatter: formatter,
         onInit: function() {
           var that = this;
@@ -13,8 +13,12 @@ sap.ui.define(
         },
         onItemSelect: function(oEvent){
           var key = oEvent.getParameter("item").getKey();
+          if(key == "reporting"){
+            this.oRouter.navTo("");
+          }
+          else{
             this.oRouter.navTo(key);
-          
+          }
         },
       });
     }

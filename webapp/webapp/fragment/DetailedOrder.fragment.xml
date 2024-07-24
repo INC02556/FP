@@ -4,22 +4,32 @@
     xmlns:s="sap.ui.table"
 >
     <VBox height="100%">
-        <HBox justifyContent="SpaceBetween">
+        <HBox justifyContent="Start">
             <FlexBox
                 direction="Column"
                 alignItems="Center"
                 justifyContent="Center"
                 fitContainer="true"
                 backgroundDesign="Solid"
-                class="sapUiTinyMargin kpi-card"
+                class="sapUiTinyMargin kpi-card kpi-card-Success"
             >
-                <NumericContent
-                    value="115"
-                    state="Loaded"
-                    class=" kpi-number"
-                />
+                <FlexBox
+                    direction="Row"
+                    alignItems="End"
+                    justifyContent="Center"
+                    fitContainer="true"
+                    backgroundDesign="Transparent"
+                    
+                >
+                <Text text="+4.11" class="sapUiSmallMarginTop sapUiTinyMarginBottom kpi-number"  />
+                    <core:Icon
+                        src="sap-icon://trend-up"
+                        color=""
+                    />
+                </FlexBox>
+
                 <Text
-                    text="All Deliveries"
+                    text="Over Picked"
                     class="sapUiSmallMarginBottom kpi-description"
                 />
             </FlexBox>
@@ -29,51 +39,23 @@
                 justifyContent="Center"
                 fitContainer="true"
                 backgroundDesign="Solid"
-                class="sapUiTinyMargin kpi-card"
+                class="sapUiTinyMargin kpi-card kapi-card-Error"
             >
-                <NumericContent
-                    value="20"
-                    state="Loaded"
-                    class=" kpi-number"
-                />
+                <FlexBox
+                    direction="Row"
+                    alignItems="End"
+                    justifyContent="Center"
+                    fitContainer="true"
+                    backgroundDesign="Transparent"
+                >
+                <Text text="-13.75" class="sapUiSmallMarginTop sapUiTinyMarginBottom kpi-number"  />
+                    <core:Icon
+                        src="sap-icon://trend-down"
+                        color=""
+                    />
+                </FlexBox>
                 <Text
-                    text="Open Deliveries"
-                    class="sapUiSmallMarginBottom kpi-description"
-                />
-            </FlexBox>
-            <FlexBox
-                direction="Column"
-                alignItems="Center"
-                justifyContent="Center"
-                fitContainer="true"
-                backgroundDesign="Solid"
-                class="sapUiTinyMargin kpi-card"
-            >
-                <NumericContent
-                    value="16"
-                    state="Loaded"
-                    class=" kpi-number"
-                />
-                <Text
-                    text="Partial Deliveries"
-                    class="sapUiSmallMarginBottom kpi-description"
-                />
-            </FlexBox>
-            <FlexBox
-                direction="Column"
-                alignItems="Center"
-                justifyContent="Center"
-                fitContainer="true"
-                backgroundDesign="Solid"
-                class="sapUiTinyMargin kpi-card"
-            >
-                <NumericContent
-                    value="09"
-                    state="Loaded"
-                    class=" kpi-number"
-                />
-                <Text
-                    text="Completed Deliveries"
+                    text="Under Picked"
                     class="sapUiSmallMarginBottom kpi-description"
                 />
             </FlexBox>
@@ -107,13 +89,13 @@
                         />
                         <Button
                             iconFirst="false"
-                            class="tertiaryButton"
+                            class="tertiary-btn"
                             icon="sap-icon://refresh"
                             text="Refresh"
                         />
                         <Button
                             iconFirst="false"
-                            class="tertiaryButton"
+                            class="tertiary-btn"
                             icon="sap-icon://download"
                             text="Export"
                         />
@@ -122,7 +104,7 @@
                 <s:columns>
                     <s:Column
                         sortProperty="Item No."
-                        width="80px"
+                        minWidth="80px"
                     >
                         <Label text="Item No." />
                         <s:template>
@@ -135,9 +117,9 @@
 
                     <s:Column
                         sortProperty="Plant"
-                        width="80px"
+                        minWidth="120px"
                     >
-                        <Label text="Plant" />
+                        <Label text="Article No." />
                         <s:template>
                             <Text
                                 text="{DeliveryOrder>Plant}"
@@ -148,9 +130,9 @@
 
                     <s:Column
                         sortProperty="Delivery"
-                        width="80px"
+                        minWidth="180px"
                     >
-                        <Label text="Delivery" />
+                        <Label text="Article Description" />
                         <s:template>
                             <Text
                                 text="{DeliveryOrder>Delivery}"
@@ -161,9 +143,9 @@
 
                     <s:Column
                         sortProperty="Article Code"
-                        width="100px"
+                        minWidth="120px"
                     >
-                        <Label text="Article Code" />
+                        <Label text="Ordering UOM" />
                         <s:template>
                             <Text
                                 text="{DeliveryOrder>Article Code}"
@@ -174,9 +156,9 @@
 
                     <s:Column
                         sortProperty="Picker Name"
-                        width="100px"
+                        minWidth="80px"
                     >
-                        <Label text="Picker Name" />
+                        <Label text="DO No." />
                         <s:template>
                             <Text
                                 text="{DeliveryOrder>Picker Name}"
@@ -187,9 +169,9 @@
 
                     <s:Column
                         sortProperty="Picked Qty"
-                        width="100px"
+                        minWidth="100px"
                     >
-                        <Label text="Picked Qty" />
+                        <Label text="Store No." />
                         <s:template>
                             <Text
                                 text="{DeliveryOrder>Picked Qty}"
@@ -200,9 +182,9 @@
 
                     <s:Column
                         sortProperty="Picking Status"
-                        width="120px"
+                        minWidth="120px"
                     >
-                        <Label text="Picking Status" />
+                        <Label text="Store Name" />
                         <s:template>
                             <Text
                                 text="{DeliveryOrder>Picking Status}"
@@ -213,9 +195,9 @@
 
                     <s:Column
                         sortProperty="Start Time"
-                        width="180px"
+                        minWidth="120px"
                     >
-                        <Label text="Start Time" />
+                        <Label text="Total STO Qty" />
                         <s:template>
                             <Text
                                 text="{DeliveryOrder>Start Time}"
@@ -226,9 +208,9 @@
 
                     <s:Column
                         sortProperty="End Time"
-                        width="180px"
+                        minWidth="120px"
                     >
-                        <Label text="End Time" />
+                        <Label text="Total Picked Qty" />
                         <s:template>
                             <Text
                                 text="{DeliveryOrder>End Time}"
@@ -239,9 +221,9 @@
 
                     <s:Column
                         sortProperty="Ship to Party"
-                        width="120px"
+                        minWidth="120px"
                     >
-                        <Label text="Ship to Party" />
+                        <Label text="Total No. of Packet (EA)" />
                         <s:template>
                             <Text
                                 text="{DeliveryOrder>Ship to Party}"

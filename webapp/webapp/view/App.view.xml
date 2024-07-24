@@ -18,12 +18,13 @@
                 itemSelect=".onItemSelect"
                 id="sideNavigation" 
                 expanded="false"
+                selectedKey="oSideNavigation.setSelectedKey(sRouteName);"
             >
                 <tnt:NavigationList>
                     <tnt:NavigationListItem
                         text="Reporting"
                         icon="sap-icon://business-objects-experience"
-                        key=""
+                        key="reporting"
                         class="sigSideNavigation"
                         
                     />

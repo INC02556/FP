@@ -17,9 +17,9 @@ sap.ui.define([], () => {
 		},
         deliveryStatus(sStatus){
             switch (sStatus) {
-				case "High":
+				case "UnScheduled":
                     return "Error"; 
-				case "Medium":
+				case "Open":
 					return "Warning"; 
 				case "Low":
                     return "Success" ;

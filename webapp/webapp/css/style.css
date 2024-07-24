@@ -2,151 +2,202 @@
 
 
 /* Side Navigation */
-.sapTntToolPage{
+.sapTntToolPage {
     padding: 0px !important;
 }
-.sapTntNL li div a{
+
+.sapTntNL li div a {
     display: flex;
     flex-direction: column;
-} 
-.sapTntNLI .sapTntNLIIcon{
+}
+
+.sapTntNLI .sapTntNLIIcon {
     color: white !important;
     padding: 7px 4px;
     border-radius: 11px;
 }
+
 .sapTntNL [tabindex]:focus::after {
     border: none !important;
 }
 
-.sapTntNLISelected{
+.sapTntNLISelected {
     border: none !important;
 }
+
 .sapTntNLISelected .sapUiIcon {
     background-color: white !important;
     color: #082940 !important;
 }
-.sapTntNLI{
+
+.sapTntNLI {
     height: 100% !important;
     background-color: transparent !important;
 }
 
-.sapTntNL .sapTntNLIIcon{
+.sapTntNL .sapTntNLIIcon {
     font-size: 1.5rem !important;
-} 
+}
+
 .sapTntNL .sapTntNLISelectionIndicator {
     display: none !important;
 }
+
 .sapTntSideNavigation {
     background-color: #082940 !important;
     border-radius: 0px !important;
     width: 4.25rem !important;
     min-width: 4.25rem !important;
 }
-.sapTntNLIText{
+
+.sapTntNLIText {
     color: white !important;
     font-size: 11px !important;
     font-weight: 100 !important;
     white-space: normal !important;
     text-align: center !important;
     margin-bottom: 10px !important;
-} 
-.sapTntToolPageAside{
+}
+
+.sapTntToolPageAside {
     margin: 0px !important;
 }
-.sapTntToolPageMain{
+
+.sapTntToolPageMain {
     margin: 0px !important;
     border-radius: 0px !important;
 }
+
 /*  */
 
 /* KPI Card */
-.kpi-card:nth-child(1){
-    background-color: #e6ecfe;
+
+.kpi-card-Success {
+    background-color: #D8ECDD;
+
+    color: #117E19;
+
 }
-.kpi-card:nth-child(2){
-    background-color: #fcf0ea;
+
+.kpi-card-Warning {
+    background-color: #FCF1EA;
+    color: #002D5D;
 }
-.kpi-card:nth-child(3){
-    background-color: #fde8e8;
+
+.kapi-card-Error {
+    background-color: #FCE8E8;
+
+    color: #B71C1C;
+
 }
-.kpi-card:nth-child(4){
-    background-color: #d9e2ec;
+
+.kapi-card-blue {
+    background-color: #E5EDFF;
+    color: #1D47A5;
 }
-.kpi-card{
+
+.kpi-card {
     border-radius: 1rem;
     width: 25%;
 }
 
-.kpi-card .kpi-number span{
-    color: #082941;
+.kpi-number {
+    font-size: 2rem;
+    font-weight: 400;
+    color: inherit !important;
 }
 
-.kpi-card .kpi-description{
-    color: #082941;
+.kpi-description {
+    color: #1B1D21;
 }
+
 /*  */
 
 /* Status Text */
 .text-Success {
     color: #1fb504;
 }
+
 .text-Warning {
     color: #f4a971;
 }
+
 .text-Error {
     color: #ce4e4d;
 }
+
 /*  */
 
 /* Tab Header */
-.sapMITBContent{
+.sapMITBContent {
     height: 100%;
     padding: 0px !important;
 }
-.sapMITH{
+
+.sapMITH {
     box-shadow: none !important;
 }
-.sapMITBContentArrow{
+
+.sapMITBContentArrow {
     display: none !important;
 }
 
-.sapMITBItem .sapMITHTextContent{
+.sapMITBItem .sapMITHTextContent {
     color: #717984 !important;
 
 }
-.sapMITBSelected .sapMITHTextContent{
+
+.sapMITBSelected .sapMITHTextContent {
     color: #082940 !important;
 }
 
-.sapMITBItem .sapUiIcon{
+.sapMITBItem .sapUiIcon {
     color: #717984 !important;
 }
-.sapMITBSelected .sapUiIcon{
+
+.sapMITBSelected .sapUiIcon {
     color: #C2752F !important;
 }
 
-.sapMITBItem:hover .sapUiIcon::before{
+.sapMITBItem:hover .sapUiIcon::before {
     color: #C2752F !important;
 }
-.sapMITBItem .sapMITBText:focus{
+
+.sapMITBItem .sapMITBText:focus {
     border: none !important;
 }
 
 /* Page Header */
-.sapMBar{
+.sapMBar {
     box-shadow: none;
 }
-.sapMTitle{
-    color:  #082940 !important;
+
+.sapMTitle {
+    color: #082940 !important;
     margin-left: 1rem !important;
 }
 
 /* primary secondary and tertiary BUTTON */
-.tertiaryButton {
-    background-color: #E8E7FA; 
+.tertiary-btn {
+    background-color: #E8E7FA;
     border-radius: 5px;
-    span{
-        color:#3026B9 !important;
+
+    span {
+        color: #3026B9 !important;
+    }
+}
+.primary-btn {
+    background-color: #082940;
+    border-radius: 5px;
+    span {
+        color: white !important;
+    }
+}
+.secondary-btn {
+    background-color: white;
+    border-radius: 5px;
+    span {
+        color: #082940 !important;
     }
 }
 
