@@ -1,6 +1,8 @@
 /* Enter your custom styles here */
 
-
+.mainPage{
+    background-color: white !important;
+}
 /* Side Navigation */
 .sapTntToolPage {
     padding: 0px !important;
@@ -74,13 +76,11 @@
 
 .kpi-card-Success {
     background-color: #D8ECDD;
-
     color: #117E19;
-
 }
 
 .kpi-card-Warning {
-    background-color: #FCF1EA;
+   background-color: #fceadf; /*  FCF1EA */
     color: #002D5D;
 }
 

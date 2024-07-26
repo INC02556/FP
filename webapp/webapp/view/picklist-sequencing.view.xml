@@ -1,7 +1,160 @@
-<mvc:View controllerName="fpchopchop.webapp.controller.picklistsequencing"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <Text text="picklist-sequencing"></Text>
+<mvc:View
+    controllerName="fpchopchop.webapp.controller.picklistsequencing"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:s="sap.ui.table"
+    xmlns="sap.m"
+    xmlns:rowmodes="sap.ui.table.rowmodes"
+>
+    <Page
+        showHeader="false"
+        class="mainPage"
+        showFooter="true"
+        enableScrolling="true"
+    >
+        <content>
+            <HBox
+                class="sapUiTinyMarginTop"
+                justifyContent="SpaceBetween"
+                width="100%"
+                alignItems="Center"
+            >
+                <VBox class="">
+                    <Title
+                        text="Pick List Sequencing"
+                        level="H1"
+                    />
+                    <Text
+                        text="Distribution Center : CB64"
+                        class="sapUiSmallMarginBegin subTitle"
+                    />
+                </VBox>
+                <VBox
+                    height="100%"
+                    alignItems="Center"
+                >
+                    <Title
+                        id="todayDate"
+                        level="H3"
+                        class="sapUiSmallMarginEnd"
+                    />
+                </VBox>
+            </HBox>
+                <s:Table
+                    width="100%"
+                    id="summaryOrderTable"
+                    rows="{DeliveryOrder>/data}"
+                    ariaLabelledBy="title"
+                    selectionMode="None"
+                >
+                    <s:extension>
+                        <OverflowToolbar
+                            class="sapUiSmallMarginTop sapUiTinyMarginBottom"
+                            style="Clear"
+                        >
+                            <Title
+                                id="tableTitle"
+                                text="SKU List (98)"
+                            />
+                            <ToolbarSpacer />
+                            <SearchField
+                                placeholder="Search SKU no. or description"
+                                value="{ui>/globalFilter}"
+                                search="filterGlobally"
+                                width="17rem"
+                            />
+                        </OverflowToolbar>
+                    </s:extension>
+                    <s:rowMode>
+					<rowmodes:Fixed/>
+				    </s:rowMode>
+                    <s:columns>
+                        <s:Column
+                            sortProperty="Item No."
+                            minWidth="80px"
+                        >
+                            <Label text="Sl. No." />
+                            <s:template>
+                                <Text
+                                    text="{DeliveryOrder>Item No.}"
+                                    wrapping="false"
+                                />
+                            </s:template>
+                        </s:Column>
+
+                        <s:Column
+                            sortProperty="Plant"
+                            minWidth="120px"
+                        >
+                            <Label text="New Sequence No." />
+                            <s:template>
+                                <Input value="{DeliveryOrder>Plant}" />
+                            </s:template>
+                        </s:Column>
+                        <s:Column
+                            sortProperty="Delivery"
+                            minWidth="120px"
+                        >
+                            <Label text="Old Sequence No." />
+                            <s:template>
+                                <Text
+                                    text="{DeliveryOrder>Delivery}"
+                                    wrapping="false"
+                                />
+                            </s:template>
+                        </s:Column>
+
+                        <s:Column
+                            sortProperty="Article Code"
+                            minWidth="120px"
+                        >
+                            <Label text="SKU No" />
+                            <s:template>
+                                <Text
+                                    text="{DeliveryOrder>Article Code}"
+                                    wrapping="false"
+                                />
+                            </s:template>
+                        </s:Column>
+
+                        <s:Column
+                            sortProperty="Picker Name"
+                            minWidth="220px"
+                        >
+                            <Label text="SKU Description " />
+                            <s:template>
+                                <Text
+                                    text="{DeliveryOrder>Picker Name}"
+                                    wrapping="false"
+                                />
+                            </s:template>
+                        </s:Column>
+
+                        <s:Column
+                            sortProperty="Picked Qty"
+                            minWidth="120px"
+                        >
+                            <Label text="Distribution Center" />
+                            <s:template>
+                                <Text
+                                    text="{DeliveryOrder>Picked Qty}"
+                                    wrapping="false"
+                                />
+                            </s:template>
+                        </s:Column>
+                    </s:columns>
+                </s:Table>
+
+        </content>
+          <footer>
+            <Bar>
+                <contentRight>
+                    <Button text="Cancel" class="secondary-btn" press=".onCancle"/>
+                    <Button text="Save" class="primary-btn" press=".onSave"/>
+                </contentRight>
+            </Bar>
+        </footer>
+
+         
     </Page>
 </mvc:View>

@@ -1,21 +1,14 @@
-sap.ui.define([], () => {
-	"use strict";
-
-	return {
-		statusText(sStatus) {
-			const oResourceBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
-			switch (sStatus) {
-				case "A":
-					return oResourceBundle.getText("invoiceStatusA");
-				case "B":
-					return oResourceBundle.getText("invoiceStatusB");
-				case "C":
-					return oResourceBundle.getText("invoiceStatusC");
-				default:
-					return sStatus;
-			}
-		},
-        deliveryStatus(sStatus){
+sap.ui.define([
+    "sap/ui/core/format/DateFormat"
+], function(DateFormat) {
+    "use strict";
+    return {
+        todayDate: function(sDate) {
+            var oDate = new Date(sDate);
+            var oDateFormat = DateFormat.getDateInstance({ pattern: "dd MMM yyyy" });
+            return oDateFormat.format(oDate);
+        },
+		deliveryStatus(sStatus){
             switch (sStatus) {
 				case "UnScheduled":
                     return "Error"; 
@@ -27,5 +20,5 @@ sap.ui.define([], () => {
 					return "Success";
 			}
         }
-	};
+    };
 });

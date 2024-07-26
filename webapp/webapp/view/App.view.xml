@@ -18,7 +18,7 @@
                 itemSelect=".onItemSelect"
                 id="sideNavigation" 
                 expanded="false"
-                selectedKey="oSideNavigation.setSelectedKey(sRouteName);"
+                selectedKey="reporting"
             >
                 <tnt:NavigationList>
                     <tnt:NavigationListItem
