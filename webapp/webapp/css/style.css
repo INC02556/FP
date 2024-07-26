@@ -3,6 +3,16 @@
 .mainPage{
     background-color: white !important;
 }
+
+/* filter */
+.filter-Label{
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: #082940 !important;
+    margin-top: 5px !important;
+}
+
+/*  */
 /* Side Navigation */
 .sapTntToolPage {
     padding: 0px !important;

@@ -4,6 +4,7 @@
     displayBlock="true"
     xmlns:s="sap.ui.table"
     xmlns="sap.m"
+    xmlns:core="sap.ui.core"
     xmlns:rowmodes="sap.ui.table.rowmodes"
 >
     <Page
@@ -40,121 +41,158 @@
                     />
                 </VBox>
             </HBox>
-                <s:Table
-                    width="100%"
-                    id="summaryOrderTable"
-                    rows="{DeliveryOrder>/data}"
-                    ariaLabelledBy="title"
-                    selectionMode="None"
-                >
-                    <s:extension>
-                        <OverflowToolbar
-                            class="sapUiSmallMarginTop sapUiTinyMarginBottom"
-                            style="Clear"
-                        >
-                            <Title
-                                id="tableTitle"
-                                text="SKU List (98)"
+            <s:Table
+                width="100%"
+                id="summaryOrderTable"
+                rows="{DeliveryOrder>/data}"
+                ariaLabelledBy="title"
+                selectionMode="None"
+                columnFreeze="true"
+                class="sapUiLargeMarginBottom"
+            >
+                <s:extension>
+                    <OverflowToolbar
+                        class="sapUiSmallMarginTop sapUiTinyMarginBottom"
+                        style="Clear"
+                    >
+                        <HBox>
+                        <HBox alignItems="Center" class="sapUiTinyMarginBeginEnd ">
+                        <Label  class="filter-Label" text="SKU No. :"  />
+                        <Select
+                                forceSelection="false"
+                                selectedKey="{/SelectedProduct}"
+                                items="{path: '/ProductCollection',sorter: { path: 'Name' }}"
+                                change="onChange"
+                                liveChange="onLiveChange">
+                                <core:ListItem
+                                    key="{ProductId}"
+                                    text="{Name}"
+                                />
+                        </Select>
+                        </HBox>
+                        <HBox alignItems="Center">
+                         <Label class="filter-Label" text="Distribution Center:"></Label>
+                            <Select
+                                forceSelection="false"
+                                selectedKey="{/SelectedProduct}"
+                                items="{path: '/ProductCollection',sorter: { path: 'Name' }}"
+                                change="onChange"
+                                liveChange="onLiveChange">
+                                <core:ListItem
+                                    key="{ProductId}"
+                                    text="{Name}"
+                                />
+                            </Select>
+                        </HBox>
+                        </HBox>
+                        <ToolbarSpacer />
+                        <SearchField
+                            placeholder="Search SKU no. or description"
+                            value="{ui>/globalFilter}"
+                            search="filterGlobally"
+                            width="17rem"
+                        />
+                    </OverflowToolbar>
+                    <Title
+                        id="tableTitle"
+                        text="SKU List (98)" level="H2"
+                    />
+                </s:extension>
+                <s:rowMode>
+                    <rowmodes:Fixed />
+                </s:rowMode>
+                <s:columns>
+                    <s:Column
+                        sortProperty="Item No."
+                        minWidth="80px"
+                    >
+                        <Label text="Sl. No." />
+                        <s:template>
+                            <Text
+                                text="{DeliveryOrder>Item No.}"
+                                wrapping="false"
                             />
-                            <ToolbarSpacer />
-                            <SearchField
-                                placeholder="Search SKU no. or description"
-                                value="{ui>/globalFilter}"
-                                search="filterGlobally"
-                                width="17rem"
+                        </s:template>
+                    </s:Column>
+
+                    <s:Column
+                        sortProperty="Plant"
+                        minWidth="120px"
+                    >
+                        <Label text="New Sequence No." />
+                        <s:template>
+                            <Input value="{DeliveryOrder>Plant}" />
+                        </s:template>
+                    </s:Column>
+                    <s:Column
+                        sortProperty="Delivery"
+                        minWidth="120px"
+                    >
+                        <Label text="Old Sequence No." />
+                        <s:template>
+                            <Text
+                                text="{DeliveryOrder>Delivery}"
+                                wrapping="false"
                             />
-                        </OverflowToolbar>
-                    </s:extension>
-                    <s:rowMode>
-					<rowmodes:Fixed/>
-				    </s:rowMode>
-                    <s:columns>
-                        <s:Column
-                            sortProperty="Item No."
-                            minWidth="80px"
-                        >
-                            <Label text="Sl. No." />
-                            <s:template>
-                                <Text
-                                    text="{DeliveryOrder>Item No.}"
-                                    wrapping="false"
-                                />
-                            </s:template>
-                        </s:Column>
+                        </s:template>
+                    </s:Column>
 
-                        <s:Column
-                            sortProperty="Plant"
-                            minWidth="120px"
-                        >
-                            <Label text="New Sequence No." />
-                            <s:template>
-                                <Input value="{DeliveryOrder>Plant}" />
-                            </s:template>
-                        </s:Column>
-                        <s:Column
-                            sortProperty="Delivery"
-                            minWidth="120px"
-                        >
-                            <Label text="Old Sequence No." />
-                            <s:template>
-                                <Text
-                                    text="{DeliveryOrder>Delivery}"
-                                    wrapping="false"
-                                />
-                            </s:template>
-                        </s:Column>
+                    <s:Column
+                        sortProperty="Article Code"
+                        minWidth="120px"
+                    >
+                        <Label text="SKU No" />
+                        <s:template>
+                            <Text
+                                text="{DeliveryOrder>Article Code}"
+                                wrapping="false"
+                            />
+                        </s:template>
+                    </s:Column>
 
-                        <s:Column
-                            sortProperty="Article Code"
-                            minWidth="120px"
-                        >
-                            <Label text="SKU No" />
-                            <s:template>
-                                <Text
-                                    text="{DeliveryOrder>Article Code}"
-                                    wrapping="false"
-                                />
-                            </s:template>
-                        </s:Column>
+                    <s:Column
+                        sortProperty="Picker Name"
+                        minWidth="220px"
+                    >
+                        <Label text="SKU Description " />
+                        <s:template>
+                            <Text
+                                text="{DeliveryOrder>Picker Name}"
+                                wrapping="false"
+                            />
+                        </s:template>
+                    </s:Column>
 
-                        <s:Column
-                            sortProperty="Picker Name"
-                            minWidth="220px"
-                        >
-                            <Label text="SKU Description " />
-                            <s:template>
-                                <Text
-                                    text="{DeliveryOrder>Picker Name}"
-                                    wrapping="false"
-                                />
-                            </s:template>
-                        </s:Column>
-
-                        <s:Column
-                            sortProperty="Picked Qty"
-                            minWidth="120px"
-                        >
-                            <Label text="Distribution Center" />
-                            <s:template>
-                                <Text
-                                    text="{DeliveryOrder>Picked Qty}"
-                                    wrapping="false"
-                                />
-                            </s:template>
-                        </s:Column>
-                    </s:columns>
-                </s:Table>
-
+                    <s:Column
+                        sortProperty="Picked Qty"
+                        minWidth="120px"
+                    >
+                        <Label text="Distribution Center" />
+                        <s:template>
+                            <Text
+                                text="{DeliveryOrder>Picked Qty}"
+                                wrapping="false"
+                            />
+                        </s:template>
+                    </s:Column>
+                </s:columns>
+            </s:Table>
         </content>
-          <footer>
+        <footer>
             <Bar>
                 <contentRight>
-                    <Button text="Cancel" class="secondary-btn" press=".onCancle"/>
-                    <Button text="Save" class="primary-btn" press=".onSave"/>
+                    <Button
+                        text="Cancel"
+                        class="secondary-btn"
+                        press=".onCancle"
+                    />
+                    <Button
+                        text="Save"
+                        class="primary-btn"
+                        press=".onSave"
+                    />
                 </contentRight>
             </Bar>
         </footer>
-
-         
     </Page>
 </mvc:View>
